@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Home</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/0d2f138c44.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/static/home.css" />
+
+    <style>
+
+
+
+
+    </style>
+  </head>
+  <body>
+
+   <header>
+        <nav class="navbar navbar-inverse navbar-fixed-top nav">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mynavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="{% url 'index' %}" class="navbar-brand">Play-Clues</a>
+                </div>
+                <div class="collapse navbar-collapse" id="mynavbar">
+                     <ul class="nav navbar-nav navbar-right">
+
+                        <li><a href="{% url 'home' %}"><span>Home</span></a></li>
+                          <li><a href="{% url 'games' %}"><span>games</span></a></li>
+
+                          <li><a href="{% url 'contact' %}"><span>Contact us</span></a></li>
+                         <li><a href="{% url 'news' %}"><span>News</span></a></li>
+                        <li><a href="{% url 'about' %}"><span>About us</span></a></li>
+                       <li><a href="{% url 'Account' %}"><span>Account</span></a></li>
+                       <li><a href="{% url 'logout' %}"><span>Logout</span></a></li>
+                       <li><a href="{% url 'profile' %}"><span>{{name}}</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div>
+      <div>
+        <!-- <h2>Carousel Example</h2> -->
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+          </ol>
+
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner">
+            <div class="item active">
+              <img
+                src="https://i.pinimg.com/originals/b5/77/d4/b577d49de2e6d50f5b0f9f10018f1724.jpg"
+                alt="isl"
+                style="width: 100%"
+              />
+            </div>
+
+            <div class="item">
+              <img
+                src="https://cricketaddictor.com/wp-content/uploads/2021/03/153757448_173638941016448_6980867142752435675_n.jpg"
+                alt="ipl"
+                style="width: 100%"
+              />
+            </div>
+
+            <div class="item">
+              <img
+                src="https://www.india.com/wp-content/uploads/2016/06/01311.jpg"
+                alt="kbd"
+                style="width: 100%"
+              />
+            </div>
+          </div>
+
+          <!-- Left and right controls -->
+          <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a
+            class="right carousel-control"
+            href="#myCarousel"
+            data-slide="next"
+          >
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <h2 text-align='center'Welcome to Play-Clues></h2>
+    <div class="vertical1">
+          <td><img alt="DESCRIPTION" src="https://fsa.zobj.net/crop.php?r=khVnGpHlXWsRsuZa_dE1En3_g4DmZywsYx7lujWvUfbzJ_2GoFD4d1lV8K7n50CbvIzxanrqYRHNsxyR1UjHQ0vIe6H4ha5QbrjX1NGiCUcV10X1f50s7irayHSlcK3Q5aqCBsJqVLVD-1Nw" height="1000px" width="500px" /></td>
+        </div>
+        <div class="vertical2">
+        <td><img alt="DESCRIPTION" src="https://pbs.twimg.com/media/Cb75PLEXIAEPYkk.jpg " height="1000px" width="515px" /></td>
+    </div>
+    <div class="vertical3">
+      <td><img alt="DESCRIPTION" src="https://www.oneindia.com/ph-big/2017/08/bengaluru-bulls-players-with-bengal-warriors-in-action-during-their-pro-kabaddi-league-match_150234548600.jpg" height="1000px" width="500px" /></td>
+  </div>
+  <section id="pricing">
+    <div class="overlay-2"></div>
+    <div class="pricing__bg"></div>
+    <div class="pricing__text__container">
+      <h1 class="pricing__heading">Pricing</h1>
+      <h4 class="pricing__heading__small">First time customer? Try our standard Trade. Looking t get more out of it? Go Platinum!</h4>
+    </div>
+    <div class="pricing__row">
+      <div class="pricing__row__col col-1">
+        <div class="col__box">
+          <h4>Standard <br>Package</h4>
+          <p>$25</p>
+        </div>
+        <div class="col__text">
+          <p>One Guaranteed individual sports Trade credit</p>
+        </div>
+      </div>
+      <div class="pricing__row__col col-2">
+        <div class="col__box">
+          <h4>Bronze<br>Package</h4>
+          <p>$25</p>
+        </div>
+        <div class="col__text">
+          <p>One Guaranteed individual sports Trade credit</p>
+        </div>
+      </div>
+      <div class="pricing__row__col col-3">
+        <div class="col__box">
+          <h4>Silver<br>Package</h4>
+          <p>$25</p>
+        </div>
+        <div class="col__text">
+          <p>One Guaranteed individual sports Trade credit</p>
+        </div>
+      </div>
+      <div class="pricing__row__col col-4">
+        <div class="col__box">
+          <h4>Gold<br>Package</h4>
+          <p>$25</p>
+        </div>
+        <div class="col__text">
+          <p>One Guaranteed individual sports Trade credit</p>
+        </div>
+      </div>
+    </div>
+    <div class="pricing__disclaimer">
+
+    </div>
+    <div class="pricing__cta__container">
+      <a href="{% url 'games' %}" class="pricing__cta">Join now</a>
+    </div>
+  </section>
+  <section class="scorecard" id="scorecard">
+    <div class="scorecard__text__container">
+      <h1 class="scorecard__heading">MATCHES</h1>
+    </div>
+    <div class="table__container">
+      <table id="table">
+        <tr class="table__row__head">
+          <th>Date</th>
+          <th>Match</th>
+          <th>Venues</th>
+          <th>Result</th>
+        </tr>
+        <tr class="table__row">
+          <td>may 10th 2021</td>
+          <td>CSK vs DC</td>
+          <td>chennai</td>
+          <td>Correct</td>
+        </tr>
+        <tr class="table__row">
+          <td>may 9th 2021</td>
+          <td>Miami Heat vs Portland Trailblazers</td>
+          <td>portland</td>
+          <td>Correct</td>
+        </tr>
+        <tr class="table__row">
+          <td>may 7th 2021</td>
+          <td>KKR vs MI</td>
+          <td>mumbai</td>
+          <td>Correct</td>
+        </tr>
+        <tr class="table__row">
+          <td>may 4th 2021</td>
+          <td>Indiana Pacers vs Toronto Raptors</td>
+          <td>Ahmedabad</td>
+          <td>Correct</td>
+        </tr>
+        <tr class="table__row">
+          <td>may 3rd 2021</td>
+          <td>Philadelphia 76ers vs Miami Heat</td>
+          <td>chennai</td>
+          <td>Correct</td>
+        </tr>
+        <tr class="table__row">
+          <td>may 2nd 2021</td>
+          <td>Australian Open Final: Dominic Thiem vs Novak Djokovic</td>
+          <td>Delhi</td>
+          <td>Correct</td>
+        </tr>
+        <tr class="table__row">
+          <td>june 1st 2021</td>
+          <td>Los Angeles Laker vs Sacramento Kings</td>
+          <td>londan</td>
+          <td>Correct</td>
+        </tr>
+        <tr class="table__row">
+          <td>june 1st 2020</td>
+          <td>RCB vs SRH</td>
+          <td>chennai</td>
+          <td>Correct</td>
+        </tr>
+        <tr class="table__row">
+          <td>may 31st 2020</td>
+          <td>Portland Trailblazers vs Los Angeles Lakers</td>
+          <td>portland</td>
+          <td>Correct</td>
+        </tr>
+      </table>
+    </div>
+    <div class="scorecard__cta__container">
+      <a href="{% url 'graphs'%}" class="scorecard__cta__all">Graphs</a>
+      <a href="https://www.google.com/search?q=cricket+live+score&oq=crick&aqs=chrome.7.69i57j35i39l2j0i433l2j0j0i10i433j0i433l2j46i433.8576j0j7&sourceid=chrome&ie=UTF-8" class="scorecard__cta__scorecard">Full Scorecard</a>
+    </div>
+  </section>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="crd col-sm-3">
+        <a href="{% url 'news' %}">
+          <img
+            src="https://cdn.wallpapersafari.com/4/5/pPA4t1.jpg"
+            alt=""
+          >
+          <h2>Cricket</h2>
+          </a>
+      </div>
+      <div class="crd col-sm-3">
+        <a href="{% url 'news' %}">
+        <img
+          src="https://www.freewalldownload.com/luis-suarez/best-luis-suarez-football-soccer-player-hd-free-kick-ball-to-goal-background-mobile-download-desktop-pictures.png"
+          alt=""
+        >
+        <h2>FootBall</h2>
+        </a>
+      </img>
+      </div>
+      <div class="crd col-sm-3">
+        <a href="{% url 'news' %}">
+          <img
+            src="https://www.india.com/wp-content/uploads/2017/08/dui7X8wNfe.jpg"
+            alt="">
+          <h2>Kabaddi</h2>
+          </a>
+        </img>
+      </div>
+    </div>
+
+
+
+            </div>
+      </div>
+    </div>
+  </body>
+</html>
+

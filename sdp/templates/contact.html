@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=-width, initial-scale=1">
+        <link rel="stylesheet" href="/static/style.css"  />
+
+		<link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	</head>
+	<style>
+		.nav{
+  background-color:black;
+  font-size: larger;
+
+
+   }
+   	body{
+  background-color:lightbrown;
+   }
+
+	</style>
+
+
+	<body>
+		<header>
+            <nav class="navbar navbar-inverse navbar-fixed-top nav">
+                <div class="container">
+                    <div class="navbar-header">
+                        <a href="{% url 'index' %}" class="navbar-brand">Play-Clues</a>
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mynavbar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        </div>
+                    <div class="collapse navbar-collapse" id="mynavbar">
+                        <ul class="nav navbar-nav navbar-right">
+
+                        <li><a href="{% url 'home' %}"><span>Home</span></a></li>
+                          <li><a href="{% url 'games' %}"><span>games</span></a></li>
+
+                          <li><a href="{% url 'contact' %}"><span>Contact us</span></a></li>
+                         <li><a href="{% url 'news' %}"><span>News</span></a></li>
+                        <li><a href="{% url 'about' %}"><span>About us</span></a></li>
+                        <li><a href="{% url 'logout' %}"><span>Logout</span></a></li>
+                    </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+    <div class="container" style="margin-top: 20vh;">
+        {% if success %}
+        <div class="alert alert-success" role="alert">
+          {{success}}
+        </div>
+        {% endif %}
+        <div style="text-align:center">
+          <h2>Contact Us</h2>
+          <p>contact particular administrator for particular problem to Book maker system</p>
+        </div>
+        <div class="row">
+          <div class="column">
+            <img src="\static\download.jpg" style="width:100%"></img>
+          </div>
+          <div class="column">
+            <form action="{% url 'contact' %}" method="POST">
+                {% csrf_token %}
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" name="firstname" placeholder="Your name..">
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+              <label for="country">Country</label>
+              <select id="country" name="country">
+                <option value="australia">India</option>
+                <option value="canada">Canada</option>
+                <option value="usa">USA</option>
+              </select>
+              <label for="subject">Subject</label>
+              <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+              <input type="submit" value="Submit">
+            </form>
+          </div>
+        </div>
+      </div>
+	</body>
+</html>

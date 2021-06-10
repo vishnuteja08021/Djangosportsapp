@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+
+
+		<link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="/static/style1.css" />
+  </head>
+ <style>
+   .nav{
+          background-color:black;
+          color: red;
+
+
+
+        }
+ </style>
+  <body>
+    <header>
+        <nav class="navbar navbar-inverse navbar-fixed-top nav">
+            <div class="container">
+                <div class="navbar-header">
+                    <a href="{% url 'index' %}" class="navbar-brand">Play-Clues</a>
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mynavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    </div>
+                <div class="collapse navbar-collapse" id="mynavbar">
+                    <ul class="nav navbar-nav navbar-right">
+                                <li>
+                                </li>
+                        <li><a href="cart.html"><span>Home</span></a></li>
+                        <li><a href="settings.html"><span>Games</span></a></li>
+                          <li><a href="logout.html"><span>Contact us</span></a></li>
+                        <li><a href="logout.html"><span>News</span></a></li>
+                        <li><a href="logout.html"><span>About us</span></a></li>
+                        <li><a href="{% url 'login' %}"><span>Login</span></a></li>
+                        <li><a href="{% url 'signup' %}"><span>Signup</span></a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="login-wrap">
+      <form class="login-html" action="{%  url 'login' %}" method="POST">
+          {% csrf_token %}
+        <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
+        <input id="tab-2" type="radio" name="tab" class="sign-up">
+        <div class="login-form">
+
+            <div class="group">
+              <label for="user" class="label">Username</label>
+              <input id="user" type="text" class="input" name="uname">
+            </div>
+            <div class="group">
+              <label for="pass" class="label">Password</label>
+              <input id="pass" type="password" class="input" name="upass" data-type="password">
+            </div>
+            <div class="group">
+              <input id="check" type="checkbox" class="check" checked>
+              <label for="check"><span class="icon"></span> Keep me Signed in</label>
+            </div>
+            <div class="group">
+              <input type="submit" class="button" value="Sign In">
+            </div>
+            <div class="hr"></div>
+            <div class="foot-lnk">
+              <a href="#forgot">Forgot Password?</a>
+            </div>
+          </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=-width, initial-scale=1">
+
+		<link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	</head>
+	<style>
+		.nav{
+  background-color:black;
+  font-size: larger;
+  color: white;
+
+}
+.vid-bg{
+  position:absolute;
+  top:0%;
+  right:20;
+  bottom:0;
+  min-height: 220%;
+  nin-width:-100%;
+}
+	</style>
+
+
+	<body>
+
+		<img src="\static\play-clues.png" class="vid-bg" autoplay loop muted ></img>
+		<header>
+        <nav class="navbar navbar-inverse navbar-fixed-top nav">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mynavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="{% url 'index' %}" class="navbar-brand">Play-Clues</a>
+                </div>
+                <div class="collapse navbar-collapse" id="mynavbar">
+                    <ul class="nav navbar-nav navbar-right">
+
+                        <li><a href="{% url 'home' %}"><span>Home</span></a></li>
+                          <li><a href="{% url 'games' %}"><span>games</span></a></li>
+
+                          <li><a href="{% url 'contact' %}"><span>Contact us</span></a></li>
+                         <li><a href="{% url 'news' %}"><span>News</span></a></li>
+                        <li><a href="{% url 'about' %}"><span>About us</span></a></li>
+                        <li><a href="{% url 'login' %}"><span>Login</span></a></li>
+                        <li><a href="{% url 'signup' %}"><span>Signup</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+	</body>
+</html>

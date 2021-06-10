@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+a
+{
+text-decoration: none;
+color: #fff;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #474e5d;
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 550px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="about-section">
+  <h2 class="about__heading__med">How it Works</h2>
+          <h4 class="about__heading__small">Guidance through the process we help you win</h4>
+          <h3 class="about__steps">3 easy steps</h3>
+          <p class="about__p">1. Register an account</p>
+          <p class="about__p">2. Choose your Package <span class="after__p"> Pick a package that is right for you</span></p>
+          <p class="about__p">3. Unlock your picks and start winning<span class="after__p"> Use your picks and bet with your bookie</span></p>
+</div>
+
+<h2 style="text-align:center">Our Team</h2>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="\static\ba2.jpg" alt="" style="width:80%">
+      <div class="container">
+        <h2>M.Bala Vamsi</h2>
+        <p class="title">CEO & Founder</p>
+        <p>As a data scientist i prepare prediction graphs and visulize each user Data</p>
+        <p>BalaVamsi@play.com</p>
+        <p><button class="button"><a href="{% url 'contact' %}">Contact</a></button></button></p>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="\static\vi2.jpg" alt="" style="width:80%">
+      <div class="container">
+        <h2>R.Vishnu Teja</h2>
+        <p class="title">Art Director</p>
+        <p>As a Database Adminstrator i need to maintain the data and make sure that the website run well</p>
+        <p>VishnuTeja@play.com</p>
+        <p><button class="button"><a href="{% url 'contact' %}">Contact</a></button></p>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="\static\sha.jpg" alt="" style="width:80%">
+      <div class="container">
+        <h2>Shajahan</h2>
+        <p class="title">Designer</p>
+        <p>As a web Developer I need to Develop The Website and also Maintain the Data</p>
+        <p>shajahan@play.com</p>
+        <p><button class="button"> <a href="{% url 'contact' %}">Contact</a></button></button></p>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
